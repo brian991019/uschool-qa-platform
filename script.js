@@ -7,8 +7,8 @@ const registerForm = document.getElementById("registerForm");
 
 const message = document.getElementById("message");
 
-registerForm.classList.add("hidden");
-loginForm.classList.add("hidden");
+//registerForm.classList.add("hidden");
+//loginForm.classList.add("hidden");
 
 // 切換到登入
 loginTab.addEventListener("click", () => {
