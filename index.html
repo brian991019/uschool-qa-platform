@@ -39,14 +39,16 @@
         <!-- 註冊區域 -->
         <form id="registerForm" class="hidden">
             <h2>建立帳號</h2>
-            <label for="loginRole">登入身份</label>
+            <div class="form-group">
+                <label for="loginRole">登入身份</label>
 
-            <select id="loginRole" required>
-                <option value="student">學生</option>
-                <option value="teacher">老師</option>
-                <option value="admin" disabled>⚠️管理員</option>
-            </select>
-
+                <select id="loginRole" required>
+                    <option value="student">學生</option>
+                    <option value="teacher">老師</option>
+                    <option value="admin" disabled>⚠️管理員</option>
+                </select>
+            </div>
+            <br>
             <input id="registerName"
                 type="text"
                 placeholder="姓名"
@@ -68,8 +70,8 @@
                 required>
 
             <button type="submit" class="submitBtn">註冊</button>
-            <p>注意：由於我無法確保你的數據安全，請勿使用你常使用的賬密，建議直接以學號設置</p>
-            <p>另外管理員身份需申請，且目前暫不開放，未來教師身份需要由管理員確認申請才可正式建立賬號</p>
+            <p class = 'warning'>注意：由於我無法確保你的數據安全，請勿使用你常使用的賬密，建議直接以學號設置</p>
+            <p class = 'warning'>另外管理員身份需申請，且目前暫不開放，未來教師身份需要由管理員確認申請才可正式建立賬號</p>
         </form>
 
         <p id="message"></p>

@@ -90,30 +90,33 @@ input {
     color: #d44;
 }
 
-/* 身份選擇下拉選單 */
-select {
+
+.form-group {
+    margin: 12px 0;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.form-group select {
+    display: block;
     width: 100%;
     padding: 13px;
-    margin: 8px 0;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: white;
-    color: #333;
     font-size: 15px;
+    color: #333;
     cursor: pointer;
-    outline: none;
 }
 
-/* 點擊時的效果 */
-select:focus {
-    border-color: #315b91;
-    box-shadow: 0 0 0 3px #315b9118;
-}
-
-/* 選項 */
-option {
-    padding: 10px;
-}
+.warning {
+    color:#d44;
+} /*.就是class的意思*/
 
 /*
 body {
@@ -128,3 +131,27 @@ h1 {
     color: #263b5e;
 }
     */
+/* 身份選擇下拉選單 */
+/* select {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* 點擊時的效果 */
+/* select:focus {
+    border-color: #315b91;
+    box-shadow: 0 0 0 3px #315b9118;
+} */
+
+/* 選項 */
+/* option {
+    padding: 10px;
+}  */ */
