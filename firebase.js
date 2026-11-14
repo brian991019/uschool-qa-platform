@@ -1,3 +1,36 @@
+
+
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/13.3.0/firebase-app.js";
+
+import {
+    getFirestore
+} from "https://www.gstatic.com/firebasejs/13.3.0/firebase-firestore.js";
+
+import {
+    getAuth
+} from "https://www.gstatic.com/firebasejs/13.3.0/firebase-auth.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBB_qcp_1SeVy6ROt1WZUFhagIFi7jM8uk",
+    authDomain: "uschool-qa-platform.firebaseapp.com",
+    projectId: "uschool-qa-platform",
+    storageBucket: "uschool-qa-platform.firebasestorage.app",
+    messagingSenderId: "352030006609",
+    appId: "1:352030006609:web:bac01ee3ed97cf41b4c770"
+};
+
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+const auth = getAuth(app);
+
+export { db, auth };
+
+
+
+
+/*
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/13.3.0/firebase-app.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/13.3.0/firebase-firestore.js";
@@ -27,6 +60,7 @@ const db = getFirestore(app);
 
 // 匯出資料庫，讓其他程式使用
 export { db };
+*/
 
 /*
 
