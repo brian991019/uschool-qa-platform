@@ -87,7 +87,7 @@ input {
 
 #message {
     text-align: center;
-    color: #d44;
+    color: rgb(53, 13, 233);
 }
 
 
@@ -117,6 +117,7 @@ input {
 .warning {
     color:#d44;
 } /*.就是class的意思*/
+
 
 /*
 body {
@@ -154,4 +155,4 @@ h1 {
 /* 選項 */
 /* option {
     padding: 10px;
-}  */ */
+}  */ 
