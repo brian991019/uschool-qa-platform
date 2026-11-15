@@ -22,4 +22,33 @@ uschool-qa-platform/
 │
 └── assets/
     ├── images/
-    └── icons/
+    └── icons/\
+
+
+
+
+
+
+
+主網頁流程圖：
+
+    使用者進入網站
+      │
+      ▼
+   主網頁
+      │
+      ▼
+  點擊登入／註冊
+      │
+      ▼
+   登入成功
+      │
+      ▼
+  讀取 Firestore
+      │
+      ├── student → STUDENT/index.html
+      │
+      └── teacher → TEACHER/index.html
+                         │
+                         ▼
+                    檢查審核狀態
