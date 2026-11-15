@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USchool 問答平台_教師註冊</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <h1>USchool</h1>
+        <p class="subtitle">校園知識交流平台</p>
+
+        <div class="tabs">
+            <button id="registerTab">註冊</button>
+        </div>
+
+        <!-- 註冊區域 -->
+        <form id="teacherForm">
+
+            <div id="teacherStep1">
+                <!-- 姓名、帳號、Email、密碼 -->
+                <h2>建立帳號</h2>
+                <input id="registerName"
+                    type="text"
+                    placeholder="姓名"
+                    required>
+                <br>
+                <input id="registerUsername"
+                    type="text"
+                    placeholder="使用者帳號"
+                    required>
+                <br>
+                <input id="registerEmail"
+                    type="email"
+                    placeholder="電子郵件"
+                    required>
+                <br>
+                <input id="registerPassword"
+                    type="password"
+                    placeholder="密碼"
+                    required>
+
+                
+                <p class = 'warning'>注意：由於我無法確保你的數據安全，請勿使用你常使用的賬密，建議直接以學號設置</p>
+                <p class = 'warning'>另外管理員身份需申請，且目前暫不開放，未來教師身份需要由管理員確認申請才可正式建立賬號</p>
+
+                    <button type="button" id="nextStepBtn" class="submitBtn">
+                        下一步
+                    </button>
+            </div>
+
+            <div id="teacherStep2" class="hidden">
+                <!-- 科目選擇 -->
+                <h2>可提供協助的科目</h2>
+            <p class="hint">可複選，請選擇你願意協助的領域。</p>
+
+            <div id="subjectList" class="subject-grid">
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="國文">
+                    <span>國文</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="英文">
+                    <span>英文</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="數學">
+                    <span>數學</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="物理">
+                    <span>物理</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="化學">
+                    <span>化學</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="生物">
+                    <span>生物</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="地科">
+                    <span>地科</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="地理">
+                    <span>地理</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="歷史">
+                    <span>歷史</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="公民">
+                    <span>公民</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="資訊（程式）">
+                    <span>資訊（程式）</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="設備故障報修">
+                    <span>設備故障報修</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="生科">
+                    <span>生科</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="體育">
+                    <span>體育</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="美術">
+                    <span>美術</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="校定必修">
+                    <span>校定必修</span>
+                </label>
+
+                <label class="subject-option">
+                    <input type="checkbox" name="subjects" value="音樂">
+                    <span>音樂</span>
+                </label>
+
+            </div>
+
+                    <!-- 心靈輔導師選項 -->
+                    <label class="counsel-option">
+                        <input type="checkbox" id="counselor">
+                        <span>
+                            <strong>我有意願擔任心靈輔導師</strong>
+                            <small>此項意願與學科服務分開計算。</small>
+                        </span>
+                    </label>
+
+
+                    <button type="button" id="backStepBtn" class="backBtn">
+                        上一步
+                    </button>
+
+                    <button type="submit" class="submitBtn">
+                        送出教師申請
+                    </button>
+
+                            <p id="teacherMessage"></p>
+                    <button type="submit" class="submitBtn">註冊</button>
+                </form>
+            </div>
+
+            <p id="teacherMessage"></p>
+
+        </form>
+
+        <p id="message"></p>
+        
+    </main>
+
+
+    <!--______________________________________________-->
+    <!-- <br>
+
+    <main class="container teacher-container">
+    <h1>教師服務申請</h1>
+    <p class="subtitle">USchool 校園問答平台</p>
+
+    
+    </main> -->
+
+<script type="module" src="./teacher-register.js"></script>
+    
+
+</body>
+</html>
+
+
+<!-- 
+<form id="registerForm" class="hidden">
+            <div id="teacherStep1"></div>
+            
+<form id="teacherForm">
+
+        <h2>基本資料</h2>
+
+        <input id="teacherName" type="text"
+            placeholder="姓名" required>
+
+        <input id="teacherUsername" type="text"
+            placeholder="使用者帳號（4～20 位英文、數字或底線）"
+            required>
+
+        <input id="teacherEmail" type="email"
+            placeholder="電子郵件" required>
+
+        <input id="teacherPassword" type="password"
+            placeholder="密碼"
+            required>
+
+        
+
+        
+
+        <button type="submit" class="submitBtn">
+            送出教師申請
+        </button>
+
+        <p id="teacherMessage"></p>
+        <button type="submit" class="submitBtn">註冊</button>
+    </form> -->

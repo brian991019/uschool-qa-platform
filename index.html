@@ -27,6 +27,7 @@
                 type="text"
                 placeholder="使用者帳號"
                 required>
+            <!--required意味著這格是必填欄，然後input是不需要結尾的，直接使用>包起來就好了-->
             <br>
             <input id="loginPassword"
                 type="password"
@@ -41,14 +42,14 @@
             <h2>建立帳號</h2>
             <div class="form-group">
                 <label for="loginRole">登入身份</label>
-
+<!-- 
                 <select id="loginRole" required>
                     <option value="student">學生</option>
                     <option value="teacher">老師</option>
                     <option value="admin" disabled>⚠️管理員</option>
                 </select>
             </div>
-            <br>
+            <br> -->
             <input id="registerName"
                 type="text"
                 placeholder="姓名"
@@ -70,14 +71,19 @@
                 required>
 
             <button type="submit" class="submitBtn">註冊</button>
+            <button type="button" id="teacherRegisterBtn" class="teacher-link">
+                申請教師帳號
+            </button>
             <p class = 'warning'>注意：由於我無法確保你的數據安全，請勿使用你常使用的賬密，建議直接以學號設置</p>
             <p class = 'warning'>另外管理員身份需申請，且目前暫不開放，未來教師身份需要由管理員確認申請才可正式建立賬號</p>
+            <p class = 'warning'>本頁面針對學生，如果你是教師請點擊申請教師賬號按鈕！</p>
         </form>
 
         <p id="message"></p>
     </main>
 
     <script type="module" src="./script.js"></script>
+
 
 </body>
 </html>

@@ -81,9 +81,9 @@ input {
     background: #244675;
 }
 
-.hidden {
+/* .hidden {
     display: none;
-}
+} */
 
 #message {
     text-align: center;
@@ -118,6 +118,181 @@ input {
     color:#d44;
 } /*.就是class的意思*/
 
+.teacher-container {
+    max-width: 620px;
+    text-align: left;
+}
+
+.teacher-container h1,
+.teacher-container .subtitle {
+    text-align: center;
+}
+
+.teacher-container h2 {
+    text-align: left;
+    margin-top: 28px;
+    font-size: 18px;
+}
+
+.hint {
+    color: #777;
+    font-size: 13px;
+}
+
+/* 科目網格 */
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 16px 0;
+}
+
+/* 隱藏原生核取方塊，但保留可操作性 */
+.subject-option input,
+.counsel-option input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+/* 科目選項 */
+.subject-option {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 12px;
+    border: 1px solid #dedede;
+    border-radius: 9px;
+    background: #fff;
+    cursor: pointer;
+    transition: background .15s, border-color .15s;
+}
+
+.subject-option:hover {
+    background: #f3f7fb;
+    border-color: #9bbbd5;
+}
+
+.subject-option:has(input:checked) {
+    background: #eaf4ff;
+    border-color: #1683c7;
+    color: #1769aa;
+}
+
+.subject-option span::before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+    vertical-align: -3px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background: white;
+}
+
+.subject-option input:checked + span::before {
+    content: "✓";
+    color: white;
+    text-align: center;
+    line-height: 17px;
+    font-size: 12px;
+    background: #1683c7;
+    border-color: #1683c7;
+}
+
+/* 心靈輔導師區塊 */
+.counsel-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 17px;
+    margin: 22px 0;
+    border: 1px solid #55c4d0;
+    border-radius: 10px;
+    background: #e2f8fa;
+    cursor: pointer;
+}
+
+.counsel-option span {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.counsel-option small {
+    color: #52777b;
+}
+
+.counsel-option span::before {
+    content: "□";
+    font-size: 20px;
+    color: #168b9b;
+    position: absolute;
+    margin-left: -17px;
+}
+
+.counsel-option:has(input:checked) {
+    background: #c9f0f3;
+    border-color: #089eae;
+}
+
+.counsel-option:has(input:checked) span::before {
+    content: "☑";
+}
+
+#teacherMessage {
+    text-align: center;
+    color: #d44;
+}
+
+@media (max-width: 480px) {
+    .subject-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .teacher-container {
+        padding: 22px;
+    }
+}
+
+.teacher-link {
+    display: block;
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    border: 1px solid #315b91;
+    border-radius: 8px;
+    background: white;
+    color: #315b91;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.teacher-link:hover {
+    background: #eef4fb;
+}
+.backBtn {
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    color: #444;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.backBtn:hover {
+    background: #f1f3f5;
+}
+.hidden {
+    display: none !important;
+}
 
 /*
 body {

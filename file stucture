@@ -1,0 +1,25 @@
+uschool-qa-platform/
+│
+├── index.html                 ← 主網頁入口
+│
+├── LOGIN/
+│   ├── index.html             ← 登入／學生註冊
+│   ├── register-teacher.html  ← 教師申請
+│   ├── style.css
+│   ├── script.js
+│   ├── teacher-register.js
+│   └── firebase.js
+│
+├── STUDENT/
+│   ├── index.html             ← 學生首頁
+│   ├── style.css
+│   └── script.js
+│
+├── TEACHER/
+│   ├── index.html             ← 教師首頁
+│   ├── style.css
+│   └── script.js
+│
+└── assets/
+    ├── images/
+    └── icons/

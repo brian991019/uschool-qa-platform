@@ -24,15 +24,15 @@ const message = document.getElementById("message");
 //loginForm.classList.add("hidden");
 
 //身份
-const loginRole = document.getElementById("loginRole");
+// const loginRole = document.getElementById("loginRole");
 
-loginRole.addEventListener("change", () => {
-    if (loginRole.value === "admin") {
-        message.textContent = "管理員身份需另外申請，目前尚未開放。";
-    } else {
-        message.textContent = "";
-    }
-});
+// loginRole.addEventListener("change", () => {
+//     if (loginRole.value === "admin") {
+//         message.textContent = "管理員身份需另外申請，目前尚未開放。";
+//     } else {
+//         message.textContent = "";
+//     }
+// });
 
 // 切換到登入
 loginTab.addEventListener("click", () => {
@@ -111,13 +111,19 @@ registerForm.addEventListener("submit", async (e) => {
     }
 });
 
+// 前往教師註冊頁面
+document.getElementById("teacherRegisterBtn")
+    .addEventListener("click", () => {
+        window.location.href = "./register-teacher.html";
+    });
+
 // 使用者登入
 loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const username = document.getElementById("loginUsername").value.trim().toLowerCase();
     const password = document.getElementById("loginPassword").value;
-    const selectedRole = document.getElementById("loginRole").value;
+    //const selectedRole = document.getElementById("loginRole").value;
 
     message.textContent = "正在登入……";
 
@@ -150,11 +156,11 @@ loginForm.addEventListener("submit", async (e) => {
         const userData = userDoc.data();
 
         // 檢查身份是否符合
-        if (userData.role !== selectedRole) {
-            await signOut(auth);
-            message.textContent = "登入身份與帳號設定不符。";
-            return;
-        }
+        // if (userData.role !== selectedRole) {
+        //     await signOut(auth);
+        //     message.textContent = "登入身份與帳號設定不符。";
+        //     return;
+        // }
 
         // 檢查老師是否已通過審核
         if (userData.role === "teacher" && userData.status !== "approved") {
