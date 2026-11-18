@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>訪客瀏覽｜Uschool 校園知識交流平台</title>
+
+    <link rel="icon" type="image/svg+xml"
+          href="../assets/images/icons/uschool-qa.svg">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+
+    <!-- 上方導覽列 -->
+    <header class="topbar" id="topbar">
+
+        <a href="../index.html" class="topbar-brand">
+            <img src="../assets/images/icons/uschool-qa.svg"
+                alt="Uschool 平台圖標">
+            <span class="topbar-brand-name">
+                Uschool 校園知識交流平台
+            </span>
+        </a>
+
+        <button id="navToggle" class="nav-toggle"
+                type="button" title="收合／展開導覽列">
+            <span>☰</span>
+        </button>
+
+        <nav class="top-nav">
+
+            <button class="nav-item active" data-section="questions"
+                    type="button">
+                <span class="nav-icon">💬</span>
+                <span class="nav-label">問題觀摩</span>
+            </button>
+
+            <button class="nav-item" data-section="music"
+                    type="button">
+                <span class="nav-icon">🎧</span>
+                <span class="nav-label">心靈充電站</span>
+            </button>
+
+            <button class="nav-item locked" data-locked="true"
+                    type="button">
+                <span class="nav-icon">✏️</span>
+                <span class="nav-label">我要提問</span>
+                <span class="lock-icon">🔒</span>
+            </button>
+
+            <button class="nav-item locked" data-locked="true"
+                    type="button">
+                <span class="nav-icon">📋</span>
+                <span class="nav-label">歷史記錄</span>
+                <span class="lock-icon">🔒</span>
+            </button>
+
+            <button class="nav-item locked" data-locked="true"
+                    type="button">
+                <span class="nav-icon">💙</span>
+                <span class="nav-label">心靈輔導</span>
+                <span class="lock-icon">🔒</span>
+            </button>
+
+            <button class="nav-item locked" data-locked="true"
+                    type="button">
+                <span class="nav-icon">📝</span>
+                <span class="nav-label">問題反饋</span>
+                <span class="lock-icon">🔒</span>
+            </button>
+
+        </nav>
+
+        <a href="../login/index.html" class="login-button">
+            登入／註冊
+        </a>
+
+    </header>
+
+    <!-- 側邊導覽列 -->
+    <!-- <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+            <img src="../assets/images/icons/uschool-qa.svg"
+                 alt="平台圖標">
+            <span class="brand-name">Uschool QA</span>
+        </div>
+
+        <button id="sidebarToggle" class="sidebar-toggle"
+                type="button" title="收合／展開導覽列">
+            ☰
+        </button>
+
+        <div class="sidebar-divider"></div>
+
+        <nav class="sidebar-nav">
+
+            <button class="nav-item active" data-section="questions">
+                <span class="nav-icon">💬</span>
+                <span class="nav-label">問題觀摩</span>
+            </button>
+
+            <button class="nav-item" data-section="music">
+                <span class="nav-icon">🎧</span>
+                <span class="nav-label">心靈充電站</span>
+            </button>
+
+            <div class="sidebar-divider"></div>
+
+            <button class="nav-item locked" data-locked="true">
+                <span class="nav-icon">✏️</span>
+                <span class="nav-label">我的提問</span>
+                <span class="lock-icon">🔒</span>
+            </button>
+
+            <button class="nav-item locked" data-locked="true">
+                <span class="nav-icon">📋</span>
+                <span class="nav-label">歷史記錄</span>
+                <span class="lock-icon">🔒</span>
+            </button>
+
+            <button class="nav-item locked" data-locked="true">
+                <span class="nav-icon">💙</span>
+                <span class="nav-label">心靈輔導</span>
+                <span class="lock-icon">🔒</span>
+            </button>
+
+            <button class="nav-item locked" data-locked="true">
+                <span class="nav-icon">📝</span>
+                <span class="nav-label">問題反饋</span>
+                <span class="lock-icon">🔒</span>
+            </button>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <span class="visitor-status"></span>
+            <span class="brand-name">訪客模式</span>
+        </div>
+
+        <!-- 拖曳調整寬度 -->
+        <!-- <div class="resize-handle" id="resizeHandle"></div>
+
+    </aside> --> 
+
+
+    <!-- 主內容 -->
+    <main class="main-content" id="mainContent">
+
+        <!-- <header class="topbar">
+            <div>
+                <span class="page-subtitle">USCHOOL CAMPUS PLATFORM</span>
+                <h2>校園知識交流平台</h2>
+            </div>
+
+            <a href="../login/index.html" class="login-button">
+                登入／註冊
+            </a>
+        </header> -->
+
+
+        <!-- 問題觀摩 -->
+        <section class="content-section" id="questionsSection">
+
+            <div class="welcome-heading">
+                <div>
+                    <span class="section-tag">PUBLIC QUESTIONS</span>
+                    <h1>問題觀摩</h1>
+                    <p>瀏覽公開問題，看看大家正在探索什麼。</p>
+                </div>
+            </div>
+
+            <div class="visitor-notice">
+                <span>ℹ️</span>
+                <p>
+                    目前為訪客模式，您可以瀏覽公開問題，
+                    但無法留言或發表問題。
+                </p>
+            </div>
+
+            <div class="question-list" id="questionList">
+                <!-- 由 JavaScript 產生問題卡片 -->
+            </div>
+
+            <div class="pagination" id="pagination">
+                <button id="prevPage" type="button">上一頁</button>
+                <span id="pageInfo">第 1 頁</span>
+                <button id="nextPage" type="button">下一頁</button>
+            </div>
+
+        </section>
+
+
+        <!-- 心靈充電站 -->
+        <section class="content-section hidden" id="musicSection">
+
+            <div class="welcome-heading">
+                <div>
+                    <span class="section-tag">MUSIC & RELAX</span>
+                    <h1>心靈充電站</h1>
+                    <p>暫時放下手邊的事情，給自己一點休息時間。</p>
+                </div>
+            </div>
+
+            <div class="music-card">
+
+                <div class="music-icon">🎧</div>
+
+                <h2>讓音樂陪你充電</h2>
+
+                <p>
+                    在這裡聽聽音樂，稍作休息，
+                    再帶著新的精神繼續前進。
+                </p>
+
+                <!-- Spotify 歌單預留位置 -->
+                <div class="spotify-placeholder">
+                    <p>Spotify 歌單播放區</p>
+                    <span>未來在此嵌入 Spotify Playlist</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer class="page-footer">
+            Uschool 校園知識交流平台
+            <span>｜訪客瀏覽模式</span>
+        </footer>
+
+    </main>
+
+
+    <!-- 初次進入提示 -->
+    <div class="modal-overlay" id="welcomeModal">
+
+        <div class="modal">
+
+            <div class="modal-icon">👋</div>
+
+            <h2>歡迎來到</h2>
+            <h2>Uschool-QA-Platform</h2>
+
+            <p>
+                建議您登入或註冊帳號，
+                以使用完整的平台功能。
+            </p>
+
+            <p class="modal-secondary">
+                當然，您也可以先以訪客身份瀏覽公開內容。
+            </p>
+
+            <button id="welcomeConfirm" class="modal-primary"
+                    type="button">
+                確定，開始瀏覽
+            </button>
+
+            <a href="../login/index.html" class="modal-link">
+                前往登入／註冊
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- 受限功能提示 -->
+    <div class="modal-overlay hidden" id="loginModal">
+
+        <div class="modal">
+
+            <div class="modal-icon">🔒</div>
+
+            <h2>此功能需要登入</h2>
+
+            <p>
+                登入或註冊帳號後，
+                即可使用完整的平台服務。
+            </p>
+
+            <a href="../login/index.html"
+               class="modal-primary modal-link-button">
+                登入／註冊
+            </a>
+
+            <button id="loginModalClose" class="modal-secondary-button"
+                    type="button">
+                暫時不用
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
